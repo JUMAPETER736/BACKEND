@@ -1,9 +1,10 @@
 
 app:
-  datasources:
+  spring:
+  datasource:
       main:
          driver-class-name: org.postgresql.Driver
-         jdbc-url: jdbc:postgresql://localhost:5432/simplebackend
+         jdbc-url: jdbc:postgresql://localhost:5432/backend
          username: postgres
          password: juma1999
          pool-size: 30
@@ -13,6 +14,5 @@ app:
 
 server:
    error:
-
     include-binding-error: always
     include-message: always
