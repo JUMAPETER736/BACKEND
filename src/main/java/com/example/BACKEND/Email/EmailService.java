@@ -1,6 +1,7 @@
 package com.example.BACKEND.Email;
 
 
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,7 +14,7 @@ import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 
 @Service
-@NoArgsConstructor
+@AllArgsConstructor
 public class EmailService  implements  EmailSender{
 
     private final static Logger LOGGER = LoggerFactory.getLogger(EmailService.class);
