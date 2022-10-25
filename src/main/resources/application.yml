@@ -14,23 +14,7 @@ spring:
       format_sql: true
 
 
-      mail:
-        host: localhost
-        port: 8088
-        username: peter
-        password: juma
 
-        properties:
-          mail:
-            smtp:
-              ssl:
-                trust: "*"
-              auth: true
-              starttls:
-                enable: true
-              connectiontimeout: 4000
-              timeout: 3000
-              writetimeout: 2000
 
 
 
