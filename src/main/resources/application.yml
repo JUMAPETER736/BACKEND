@@ -2,9 +2,9 @@
 
 spring:
   datasource:
-      url: jdbc:postgresql://localhost:5432/practical
-      username: postgres
-      password: juma1999
+      url: jdbc:postgresql://ec2-52-23-131-232.compute-1.amazonaws.com:5432/df9nveoe79v64j
+      username: rddfiajmwftzlh
+      password: 8fccd7bf632ae5b193218062429ed56969e20d0c4ed3885e9b02550ad2da44a3
 
   jpa:
   hibernate:
