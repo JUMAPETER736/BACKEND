@@ -29,6 +29,7 @@ public class RegistrationService {
 
             throw new IllegalAccessException("Email is NOT valid...");
         }
+
         String token = appUserService.signUpUser(
                 new AppUser(
                         request.getFirstName(),

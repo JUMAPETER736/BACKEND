@@ -37,6 +37,7 @@ public class ConfirmationToken {
 
     @ManyToOne
     @JoinColumn(
+
             nullable = false,
             name = "login_tb"
     )
