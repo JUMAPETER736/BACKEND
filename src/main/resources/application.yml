@@ -2,7 +2,7 @@
 
 spring:
   datasource:
-      url: jdbc:postgresql://localhost:5432/practical
+      url: jdbc:postgresql://localhost:5432/Practical
       username: postgres
       password: juma1999
 

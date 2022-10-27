@@ -13,7 +13,8 @@ public class UserRegistration {
     private RegistrationService registrationService;
 
     @PostMapping
-    public String register(@RequestBody RegistrationRequest request) throws IllegalAccessException {
+    public String register(@RequestBody RegistrationRequest request)
+            throws IllegalAccessException {
 
         return registrationService.register(request);
     }
@@ -22,4 +23,7 @@ public class UserRegistration {
     public String confirm(@RequestParam("token") String token){
         return  registrationService.confirmToken(token);
     }
+
+
+
 }
