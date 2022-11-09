@@ -6,6 +6,7 @@ spring:
       username: postgres
       password: juma1999
 
+
   jpa:
   hibernate:
       ddl-auto: none
