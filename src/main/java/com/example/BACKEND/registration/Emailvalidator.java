@@ -11,4 +11,5 @@ public class Emailvalidator implements Predicate<String> {
     public boolean test(String s) {
         return true;
     }
+
 }

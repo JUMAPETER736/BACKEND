@@ -60,6 +60,7 @@ public class AppUserService implements UserDetailsService {
     }
 
     public int enableAppUser(String email) {
+
         return userRepository.enableAppUser(email);
     }
 }

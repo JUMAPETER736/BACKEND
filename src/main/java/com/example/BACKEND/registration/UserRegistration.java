@@ -17,6 +17,7 @@ public class UserRegistration {
             throws IllegalAccessException {
 
         return registrationService.register(request);
+
     }
 
     @GetMapping(path = "confirm")
