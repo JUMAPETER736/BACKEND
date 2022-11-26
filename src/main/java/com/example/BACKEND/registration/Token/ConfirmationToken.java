@@ -39,7 +39,7 @@ public class ConfirmationToken {
     @JoinColumn(
 
             nullable = false,
-            name = "login_tb"
+            name = "app_user_id"
     )
     private AppUser appUser;
 
