@@ -6,15 +6,14 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.Registration;
 
 @RestController
-@RequestMapping(path = "api/v1/registration")
+@RequestMapping(path = "api/v1/users")
 @AllArgsConstructor
 public class UserRegistration {
 
     private RegistrationService registrationService;
 
     @PostMapping
-    public String register(@RequestBody RegistrationRequest request)
-            throws IllegalAccessException {
+    public String register(@RequestBody RegistrationRequest request) throws IllegalAccessException {
 
         return registrationService.register(request);
 
