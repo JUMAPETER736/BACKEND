@@ -4,6 +4,7 @@ package com.example.BACKEND.registration;
 import com.example.BACKEND.appuser.AppUser;
 import com.example.BACKEND.appuser.AppUserRole;
 import com.example.BACKEND.appuser.AppUserService;
+import com.example.BACKEND.email.EmailSender;
 import com.example.BACKEND.registration.Token.ConfirmationToken;
 import com.example.BACKEND.registration.Token.ConfirmationTokenService;
 import lombok.AllArgsConstructor;
@@ -21,6 +22,7 @@ public class RegistrationService {
     private  final AppUserService appUserService;
     private final Emailvalidator emailvalidator;
     private final ConfirmationTokenService confirmationTokenService;
+    private final EmailSender emailSender;
 
 
     public String register(RegistrationRequest request) throws IllegalAccessException {
@@ -42,9 +44,16 @@ public class RegistrationService {
                 )
 
         );
+        String link = "http://localhost:8080/api/v1/users/confirm?token=" + token;
 
-
+        emailSender.send(request.getEmail(),
+                        buildEmail(request.getFirstName(), link));
         return token;
+    }
+
+    private String buildEmail(String name, String link) {
+
+        return "";
     }
 
     @Transactional

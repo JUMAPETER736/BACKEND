@@ -10,10 +10,11 @@ import javax.servlet.Registration;
 @AllArgsConstructor
 public class UserRegistration {
 
-    private RegistrationService registrationService;
+    private final RegistrationService registrationService;
 
     @PostMapping
-    public String register(@RequestBody RegistrationRequest request) throws IllegalAccessException {
+    public String register(@RequestBody RegistrationRequest request)
+            throws IllegalAccessException {
 
         return registrationService.register(request);
 
