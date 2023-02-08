@@ -7,7 +7,7 @@ server:
 
 spring:
   datasource:
-      url: jdbc:postgresql://localhost:5432/registration
+      url: jdbc:postgresql://localhost:5432/database
       username: postgres
       password: juma1999
 
