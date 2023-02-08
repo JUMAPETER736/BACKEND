@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.Registration;
 
 @RestController
-@RequestMapping(path = "api/v1/users")
+@RequestMapping(path = "api/v1/registration")
 @AllArgsConstructor
 public class UserRegistration {
 
@@ -25,7 +25,6 @@ public class UserRegistration {
 
         return  registrationService.confirmToken(token);
     }
-
 
 
 }

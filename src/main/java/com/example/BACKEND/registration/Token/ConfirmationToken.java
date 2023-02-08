@@ -44,7 +44,7 @@ public class ConfirmationToken {
     @JoinColumn(
 
             nullable = false,
-            name = "users_id"
+            name = "registration_id"
     )
     private AppUser appUser;
 
@@ -60,4 +60,5 @@ public class ConfirmationToken {
         this.appUser = appUser;
 
     }
+
 }

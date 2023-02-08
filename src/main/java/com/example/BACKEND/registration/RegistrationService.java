@@ -35,6 +35,7 @@ public class RegistrationService {
         }
 
         String token = appUserService.signUpUser(
+
                 new AppUser(
                         request.getFirstName(),
                         request.getLastName(),
@@ -44,7 +45,8 @@ public class RegistrationService {
                 )
 
         );
-        String link = "http://localhost:8080/api/v1/users/confirm?token=" + token;
+
+        String link = "http://localhost:8080/api/v1/registration/confirm?token=" + token;
 
         emailSender.send(request.getEmail(),
                         buildEmail(request.getFirstName(), link));
@@ -63,9 +65,11 @@ public class RegistrationService {
                 .orElseThrow(() ->
                         new IllegalStateException("token not found"));
 
+
         if (confirmationToken.getConfirmedAt() != null) {
             throw new IllegalStateException("email already confirmed");
         }
+
 
         LocalDateTime expiredAt = confirmationToken.getExpiresAt();
 
@@ -73,6 +77,7 @@ public class RegistrationService {
 
             throw new IllegalStateException("token expired");
         }
+
 
         confirmationTokenService.setConfirmedAt(token);
         appUserService.enableAppUser(

@@ -25,7 +25,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/api/v1/users")
+                .antMatchers("/api/v1/registration")
                 .permitAll()
                 .anyRequest()
                 .authenticated().and()
@@ -47,5 +47,6 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
         provider.setUserDetailsService(appUserService);
 
         return provider;
+
     }
 }
