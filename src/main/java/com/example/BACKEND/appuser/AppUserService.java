@@ -50,7 +50,7 @@ public class AppUserService implements UserDetailsService {
 
                 token,
                 LocalDateTime.now(),
-                LocalDateTime.now().plusMinutes(15),
+                LocalDateTime.now().plusMinutes(10),
                 appUser
 
         );
