@@ -7,7 +7,7 @@ server:
 
 spring:
   datasource:
-      url: jdbc:postgresql://localhost:5432/database
+      url: jdbc:postgresql://localhost:5432/students
       username: postgres
       password: juma1999
 
@@ -26,7 +26,7 @@ spring:
     host: localhost
     port: 8089
     username: peter
-    password: password
+    password: juma1999
 
     properties:
       mail:
