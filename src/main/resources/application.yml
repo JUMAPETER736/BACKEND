@@ -24,7 +24,7 @@ spring:
 
   mail:
     host: localhost
-    port: 8089
+    port: 8080
     username: peter
     password: juma1999
 

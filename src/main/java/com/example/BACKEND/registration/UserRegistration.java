@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.Registration;
 
 @RestController
-@RequestMapping(path = "api/p1/registration")
+@RequestMapping(path = "api/v1/students")
 @AllArgsConstructor
 public class UserRegistration {
 
